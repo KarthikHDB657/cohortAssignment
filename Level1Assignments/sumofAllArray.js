@@ -6,9 +6,6 @@ function sumofArrayELements(array){
     array.forEach(element => {
         sum+=element
     });
-    // for(let i = 0; i < array.length; i++){
-    //     sum += array[i];
-    // }
     return sum;
 }
 

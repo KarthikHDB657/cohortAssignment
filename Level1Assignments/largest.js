@@ -28,6 +28,7 @@ function largestOtherWay(arr){
     return res;
 }
 
+
 //Second largest
 function secondlargest(arr){
    try{ 
