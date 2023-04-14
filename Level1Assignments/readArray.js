@@ -9,6 +9,6 @@ function readingArray(){
 }
 return arr;
 }
-
-Array.from
+//using array.from
+//Array.from
 module.exports = readingArray;
