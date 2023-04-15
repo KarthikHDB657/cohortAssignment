@@ -15,8 +15,14 @@ function positiveArray(arr){
  return res;
 }
 
+//second way
 function positiveArray2(arr2){
  return arr2.filter(num => num > 0);
 }
+
+//using arrow func
+const posArr = (input) =>{ return input.filter(num => num > 0);}
+
 console.log(positiveArray(array))
 console.log(positiveArray2(array))
+console.log(posArr(array));

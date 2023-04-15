@@ -13,6 +13,11 @@ function evenArray(arr){
     return even.sort()
 }
 
+//using filter and arrow func
+const output = (input) => {
+  return input.filter(num => (num%2 === 0))
+}
 
 const res = evenArray(array)
 console.log(res)
+console.log(output(array));

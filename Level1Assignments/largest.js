@@ -4,12 +4,7 @@ const readArray = require("./readArray")
 function largest(arr){
     try {
         let max = 0;
-        // for(let i =0; i < arr.length; i++){
-          
-        //   if(max < arr[i]){
-        //      max =arr[i];
-        //   }
-        // }
+        //using for each
         arr.forEach(element => {
             if(max<element){
                 max = element;
@@ -22,7 +17,18 @@ function largest(arr){
     }
 }
 
-//Second method
+//using find and arrow func
+const output = (input) => {
+    let max = 0;
+    input.find(num => {
+        if(max < num){
+            max = num
+        }});
+    return max
+}
+
+
+//third method to find largest
 function largestOtherWay(arr){
     let res = arr.length === 0 ?  0: Math.max.apply(0, array);
     return res;
@@ -58,11 +64,18 @@ function secondlargest(arr){
 
 }
 
-//Second largest other method
+//Second largest other method won't work if we pass NAN
 function secondlargestOtherWay(arr){
     let res = arr.length != 0 ? arr.sort()[arr.length-2]: -1;
     return res;
 }
+
+//using arrow function for sec largest  won't work if we pass NAN
+const outputSec = (input) => {
+    let res = (input.length != 0 || input.length > 2) ? input.sort()[input.length-2]: -1;
+    return res;
+}
+
 
 const array = readArray();
 const max = largest(array)
@@ -81,3 +94,5 @@ console.log(max);
 console.log(largestnum);
 console.log(secondlarge);
 console.log(seclarge);
+console.log(output(array))
+console.log(outputSec(array));

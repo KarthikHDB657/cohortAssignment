@@ -8,8 +8,7 @@ function sumofArrayELements(array){
     });
     return sum;
 }
-
-
+ 
 const array = readArray();
 const result = sumofArrayELements(array)
 console.log(array);

@@ -16,4 +16,10 @@ const string = prompt('Enter a string: ');
 
 const result = countVowel(string);
 
+//using arrow func
+const newres = (input) => {
+    return input.match(/[aeiou]/gi).length;
+} 
+
 console.log(result);
+console.log(newres(string));
