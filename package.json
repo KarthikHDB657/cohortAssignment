@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "lodash": "^4.17.21",
+    "prompt-sync": "^4.2.0"
+  }
+}

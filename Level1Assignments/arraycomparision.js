@@ -18,3 +18,4 @@ function commonIntegerArray(arr1,arr2){
 
 console.log(commonIntegerArray(array1,array2))
 
+
