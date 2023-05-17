@@ -18,16 +18,17 @@
 // });
 
 //This method createBucket and upload a file named location.csv to the targeted bucket
-import { CreateBucketCommand,PutObjectCommand ,S3Client } from "@aws-sdk/client-s3";
+import { CreateBucketCommand,S3Client } from "@aws-sdk/client-s3";
 import { fileURLToPath } from "url";
-import fs from "fs";
+
 const client = new S3Client({});
 
 //Creating a bucket
 export const main = async () => {
+  const BUCKET_NAME = "kbhd-new-bucket-50";
   const command = new CreateBucketCommand({
     // The name of the bucket. Bucket names are unique and have several other constraints.
-    Bucket: "kbhd-new-bucket-47",
+    Bucket: BUCKET_NAME ,
   });
 
   try {
@@ -36,27 +37,13 @@ export const main = async () => {
   } catch (err) {
     console.error(err);
   }
+  //return BUCKET_NAME;
 };
 
-//Upload a file
-export const upload = async () => {
-    const command = new PutObjectCommand({
-      Bucket: "kbhd-new-bucket-47",
-      Key: "Location.csv",
-      Body: fs.readFileSync("Location.csv"),
-    });
-  
-    try {
-      const response = await client.send(command);
-      console.log(response);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 // Invoke main function if this file was run directly.
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-    main();
-    //try to run upload
-    upload();
+ if (process.argv[1] === fileURLToPath(import.meta.url)) {
+     main();
+    
+    
 }
 
