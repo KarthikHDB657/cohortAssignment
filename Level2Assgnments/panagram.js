@@ -9,7 +9,7 @@ function pangrams(input) {
         return false;
     }
     //initializing alphabet array
-    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    //let alphabet = "abcdefghijklmnopqrstuvwxyz";
     //removing space
     let lowercase = input.toLowerCase();
     //removing empty spaces
